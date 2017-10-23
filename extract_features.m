@@ -4,6 +4,6 @@ function feat=extract_features(filename)
     by=max(O.v(:,2))-min(O.v(:,2));
     bz=max(O.v(:,3))-min(O.v(:,3));
     d=norm([bx,by,bz]);
-    feat=[bx,by,bz,d];
+    feat=[bx/d,by/d,bz/d];
 end
 
